@@ -1,11 +1,14 @@
+/* eslint-disable no-unused-vars */
 
-const Guitar = ({ guitar,setCart }) => {
+// eslint-disable-next-line react/prop-types
+const Guitar = ({ guitar, addToCart }) => {
 
+    // eslint-disable-next-line react/prop-types
     const { id, name, image, description, price } = guitar;
 
-    const handleClick = (guitar) => {
-        setCart(guitar)
-    }
+   /*  const handleClick = (guitar) => {
+        
+    }  ejemplo N°1*/
 
 
     return (
@@ -20,7 +23,8 @@ const Guitar = ({ guitar,setCart }) => {
                 <button
                     type="button"
                     className="btn btn-dark w-100"
-                    onClick={() => handleClick(guitar)}
+                    onClick={() => addToCart(guitar)}
+                    //onClick={() => setCart( [...cart, guitar])}   ejemplo N°1 => De esta forma agregael articulo seleccionado al carrito
                 >Agregar al Carrito</button>
             </div>
         </div>
